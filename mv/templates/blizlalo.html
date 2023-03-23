@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        p{
+            color: hsl(0, 0%, 80%);
+        }
+    </style>
+    <p>{{ post.title }}</p>
+    <p>By {{ post.author }} on {{ post.created_at|date:'F j, Y' }}</p>
+    <p>{{ post.content }}</p>
+{% endblock %}

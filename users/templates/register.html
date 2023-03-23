@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        .k{
+            color: hsl(0, 0%, 80%);
+        }
+    </style>
+
+        <div style="text-align: left; padding-left: 400px;">
+            <form method="post">
+                {% csrf_token %}
+                <fieldset class="form-group k">
+                    <legend>Sign up/in</legend>
+                    {{ form }}
+                </fieldset>
+                <div class="form-group k">
+                    <button class="btn btn-outline-info" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="k"  style="text-align: center;">
+            <a href="#">Altreassd hax acounte? give $20k to login again </a>
+        </div>
+{% endblock %}
